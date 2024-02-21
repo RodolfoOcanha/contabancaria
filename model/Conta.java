@@ -7,8 +7,6 @@ public class Conta {
 	private int tipo;
 	private String titular;
 	private float saldo;
-	
-
 
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
@@ -16,6 +14,9 @@ public class Conta {
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
+	}
+
+	public Conta() {
 	}
 
 	public int getNumero() {
@@ -57,31 +58,40 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
-	
+
 	public boolean sacar(float valor) {
-		if (this.saldo<valor)
+		if (this.getSaldo() < valor) {
+			System.out.println("\n Saldo insuficiente para saque.");
 			return false;
-		
-		this.setSaldo(this.saldo - valor);
+		}
+		this.setSaldo(this.getSaldo() - valor);
 		return true;
-	}	
-	
+
+	}
+
+	public void reservaEmergencia(float valor) {
+		this.setSaldo(this.saldo + valor);
+
+	}
+
 	public void depositar(float valor) {
 		this.setSaldo(this.saldo + valor);
-		
+
 	}
+
 	public void visualizar() {
-		
-		String tipoConta="";
-		
-		switch(this.tipo) {
+
+		String tipoConta = "";
+
+		switch (this.tipo) {
 		case 1:
 			tipoConta = "Conta corrente";
 			break;
-		case 2 :
+		case 2:
 			tipoConta = "Conta Poupança";
 			break;
 		}
+
 		System.out.println("******************");
 		System.out.println("Dados da conta");
 		System.out.println("******************");
@@ -91,5 +101,5 @@ public class Conta {
 		System.out.println("Titular da conta: " + this.titular);
 		System.out.println("Saldo da conta: " + this.saldo);
 
-	}	
 	}
+}

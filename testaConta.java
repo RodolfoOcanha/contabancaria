@@ -1,25 +1,20 @@
 package conta;
 
-import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class testaConta {
 
 	public static void main(String[] args) {
 
-		Conta novaConta = new Conta(32 , 453 , 2 , "Nelson" , 2345.0f);
+		ContaPoupanca contaPoupanca1 = new ContaPoupanca(14169, 1579, 2, "Luiz", 10000.0f, 3000.0f);
+		System.out.println("Saldo inicial: " + contaPoupanca1.getSaldo());
+		contaPoupanca1.depositar(5000);
 
-		novaConta.setNumero(32);
-		novaConta.setAgencia(453);
-		novaConta.setTipo(2);
-		novaConta.setTitular("Nelson");
-		novaConta.setSaldo(2345);
+		ContaCorrente contaCorrente1 = new ContaCorrente(32, 33, 1, "Tadeu", 4000.0f, 3000.0f);
 
-		System.out.println("Numero da conta " + novaConta.getNumero());
-		System.out.println("Numero da ag " + novaConta.getAgencia());
-		System.out.println("Tipo da conta " + novaConta.getTipo());
-		System.out.println("Titular da conta " + novaConta.getTitular());
-		System.out.println("Saldo da conta " + "" + novaConta.getSaldo());
-
+		System.out.println("\nSaldo inicial: " + contaCorrente1.getSaldo());
+		contaCorrente1.sacar(3000);
+		System.out.println("Saldo após saque: " + contaCorrente1.getSaldo());
 	}
-
 }

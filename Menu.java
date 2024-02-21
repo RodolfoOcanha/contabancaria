@@ -19,6 +19,8 @@ public class Menu {
 		
 		contaNova.depositar(2000);
 		System.out.println("Depósito efetuado, o novo saldo é de: " + contaNova.getSaldo());
+		
+		
 
 	}
 
