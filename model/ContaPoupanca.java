@@ -21,7 +21,7 @@ public class ContaPoupanca extends Conta {
 
 	@Override
 	public void depositar(float valor) {
-		if (valor == 0) {
+		if (valor <= 0) {
 			System.out.println("\nValor inválido para depósito");
 			return;
 		}

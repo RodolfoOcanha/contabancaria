@@ -1,25 +1,23 @@
 package conta;
 
-import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 
 	public static void main(String[] args) {
 
-		Conta contaNova = new Conta(1, 123, 1, "Sabrina", 250000.0f);
-
-		contaNova.visualizar();
-		contaNova.setAgencia(456);
-		System.out.println(contaNova.getAgencia());
-
-		if (contaNova.sacar(100))
-			System.out.println("Saque efetuado com sucesso. O novo saldo é de : " + contaNova.getSaldo());
-		else
-			System.out.println("O saldo é insuficiente.");
+		ContaCorrente contaCorrente1 = new ContaCorrente(1, 123, 1, "Sabrina", 250000.0f , 2000.0f);
 		
-		contaNova.depositar(2000);
-		System.out.println("Depósito efetuado, o novo saldo é de: " + contaNova.getSaldo());
+		System.out.println(contaCorrente1.getNumero());
+		System.out.println(contaCorrente1.getAgencia());
+		System.out.println(contaCorrente1.getTipo());
+		System.out.println(contaCorrente1.getTitular());
+		System.out.println(contaCorrente1.getSaldo());
+		System.out.println(contaCorrente1.getLimite());
 		
+		System.out.println("Saldo Atual: " + contaCorrente1.getSaldo());
+
 		
 
 	}

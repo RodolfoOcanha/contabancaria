@@ -1,6 +1,6 @@
 package conta.model;
 
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	private int agencia;
@@ -102,4 +102,5 @@ public class Conta {
 		System.out.println("Saldo da conta: " + this.saldo);
 
 	}
+
 }
