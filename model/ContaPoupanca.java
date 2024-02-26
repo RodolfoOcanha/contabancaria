@@ -32,4 +32,9 @@ public class ContaPoupanca extends Conta {
 
 		System.out.println("\nValor adicionado à sua reserva de emergência! Seu saldo novo é: " + novoSaldo);
 	}
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Reserva de emergência:" + this.reservaEmergencia);
+	}
+	
 }

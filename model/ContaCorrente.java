@@ -26,8 +26,13 @@ public class ContaCorrente extends Conta {
 
 		}
 		this.setSaldo(this.getSaldo() - valor);
-		System.out.println("\nSaque efetuado com  sucesso, use com sabedoria!");
 		return true;
 	}
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Limite de crédito: " + this.limite);
+	}
+	
+	
 
 }

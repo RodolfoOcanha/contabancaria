@@ -92,14 +92,14 @@ public abstract class Conta {
 			break;
 		}
 
-		System.out.println("******************");
-		System.out.println("Dados da conta");
-		System.out.println("******************");
-		System.out.println("Número da conta: " + this.numero);
-		System.out.println("Agência da conta: " + this.agencia);
-		System.out.println("Tipo da conta: " + tipoConta);
-		System.out.println("Titular da conta: " + this.titular);
-		System.out.println("Saldo da conta: " + this.saldo);
+		System.out.println(Cores.TEXT_RED_BOLD +"\n********************************");
+		System.out.println(Cores.TEXT_WHITE_BOLD +"Dados da conta");
+		System.out.println(Cores.TEXT_RED_BOLD +"******************************** "   );
+		System.out.println(Cores.TEXT_WHITE_BOLD + "Número da conta: " + this.numero);
+		System.out.println(Cores.TEXT_WHITE_BOLD +"Agência: " + this.agencia);
+		System.out.println(Cores.TEXT_WHITE_BOLD +"Tipo da conta: " + tipoConta);
+		System.out.println(Cores.TEXT_WHITE_BOLD +"Titular da conta: " + this.titular);
+		System.out.println(Cores.TEXT_WHITE_BOLD +"Saldo da conta: " + this.saldo);
 
 	}
 
